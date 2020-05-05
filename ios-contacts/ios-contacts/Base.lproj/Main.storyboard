@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vao-3n-wCz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sLi-la-a41">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16096"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Contacts Table View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="Ihq-EJ-I55">
+            <objects>
+                <navigationController id="sLi-la-a41" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3yH-Wd-LVX">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Vao-3n-wCz" kind="relationship" relationship="rootViewController" id="Tq6-nJ-NvC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="upS-eV-jT0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1691" y="-57"/>
+        </scene>
+        <!--Contacts-->
         <scene sceneID="Gv3-RS-kN3">
             <objects>
                 <tableViewController id="Vao-3n-wCz" customClass="ContactsTableViewController" customModule="ios_contacts" customModuleProvider="target" sceneMemberID="viewController">
@@ -55,10 +71,11 @@
                             <outlet property="delegate" destination="Vao-3n-wCz" id="iNm-ZF-myS"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Contacts" id="U7f-87-drr"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9eG-ga-l6Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="176.81159420289856" y="1.3392857142857142"/>
+            <point key="canvasLocation" x="-883" y="-58"/>
         </scene>
     </scenes>
 </document>
